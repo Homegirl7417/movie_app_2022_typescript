@@ -1,6 +1,9 @@
-import './Movie.css'
+import React from 'react';
+import './Movie.css';
+import { useNavigate } from 'react-router-dom'
 
 interface MovieType {
+    id: number,
     year: number,
     title: string,
     summary: string,
@@ -8,9 +11,21 @@ interface MovieType {
     genres: string[],
 }
 
-const Movie = ({year, title, summary, poster, genres}: MovieType) => {
+const Movie = ({id, year, title, summary, poster, genres}: MovieType): React.ReactElement => {
+    const navigate = useNavigate()
+    const onClickMovie = (): void => {
+        navigate(`/movie/${id}`, {
+            state: {
+                year,
+                title,
+                summary,
+                poster,
+                genres
+            }
+        })
+    }
     return (
-        <div className="movie">
+        <div className="movie" onClick={onClickMovie}>
             <img src={poster} alt={title} title={title} />
             <div className="movie__data">
                 <h3 className="movie__title">{title}</h3>

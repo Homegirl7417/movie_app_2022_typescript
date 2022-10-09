@@ -35,6 +35,7 @@ const Home = (): React.ReactElement => {
               movies.map((movie: any) => (
                 <Movie
                   key={movie.id}
+                  id={movie.id}
                   year={movie.year}
                   title={movie.title}
                   summary={movie.summary}
