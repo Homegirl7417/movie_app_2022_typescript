@@ -32,7 +32,6 @@ const App: React.FC = () => {
               movies.map((movie: any) => (
                 <Movie
                   key={movie.id}
-                  id={movie.ie}
                   year={movie.year}
                   title={movie.title}
                   summary={movie.summary}
