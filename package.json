@@ -14,6 +14,7 @@
     "gh-pages": "4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "6.4.2",
     "react-scripts": "5.0.1",
     "typescript": "4.8.4",
     "web-vitals": "2.1.4"
@@ -44,5 +45,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://homegirl7417.github.io/movie_app_2022_typescript/"
+  "homepage": "https://homegirl7417.github.io/movie_app_2022_typescript/",
+  "devDependencies": {
+    "@types/react-router-dom": "5.3.3"
+  }
 }
