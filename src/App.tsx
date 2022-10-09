@@ -20,22 +20,30 @@ const App: React.FC = () => {
     getMovies()
   }, [])
   return (
-    <div className="App">
+    <section className="container">
       { 
-        isLoading 
-        ? 'Loading...' 
-        : movies.map((movie: any) => (
-          <Movie
-            key={movie.id}
-            id={movie.ie}
-            year={movie.year}
-            title={movie.title}
-            summary={movie.summary}
-            poster={movie.medium_cover_image}
-          />
-        ))
-        };
-    </div>
+        isLoading ? (
+          <div className="loader">
+            <span>Loading...</span>
+          </div>
+        ) : (
+          <div className="movies">
+            {
+              movies.map((movie: any) => (
+                <Movie
+                  key={movie.id}
+                  id={movie.ie}
+                  year={movie.year}
+                  title={movie.title}
+                  summary={movie.summary}
+                  poster={movie.medium_cover_image}
+                />
+              ))
+            }
+          </div>
+        )
+      };
+    </section>
   );
 }
 
