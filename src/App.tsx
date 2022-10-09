@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Movie from './Movie';
+import './App.css';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
