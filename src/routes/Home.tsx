@@ -46,7 +46,7 @@ const Home = (): React.ReactElement => {
             }
           </div>
         )
-      };
+      }
     </section>
   );
 }
